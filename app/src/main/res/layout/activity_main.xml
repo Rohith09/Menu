@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF00"
+    tools:context="com.example.chandrassekhar.menu.MainActivity">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="#FF0000"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+ />
+
+    <TextView
+        android:id="@+id/item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item"
+        android:textColor="#FF0000"
+        android:layout_below="@id/name"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qty"
+        android:layout_below="@id/name"
+        android:textColor="#FF0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/item"
+        android:layout_marginLeft="60dp"
+        />
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:layout_below="@id/name"
+        android:textColor="#FF0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/qty"
+        android:layout_marginLeft="60dp"
+        />
+
+
+    <CheckBox
+        android:layout_marginTop="20dp"
+        android:id="@+id/bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:text="@string/bg"
+        android:layout_below="@id/item"
+        />
+    <CheckBox
+        android:id="@+id/mo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mo"
+        android:layout_below="@id/bg"
+        android:textColor="#FF0000"
+        android:layout_marginTop="20dp"
+
+        />
+    <CheckBox
+        android:id="@+id/sh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sh"
+        android:textColor="#FF0000"
+        android:layout_below="@id/mo"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <CheckBox
+        android:id="@+id/co"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/co"
+        android:textColor="#FF0000"
+        android:layout_below="@id/sh"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bg"
+        android:layout_marginStart="50dp"
+        android:layout_below="@id/qty"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/mo"
+        android:layout_below="@id/et1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+
+
+        />
+
+   <EditText
+        android:id="@+id/et3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/sh"
+        android:layout_below="@id/et2"
+       android:layout_marginLeft="60dp"
+       android:layout_marginTop="10dp"
+
+
+
+       />
+
+    <EditText
+        android:id="@+id/et4"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/co"
+        android:layout_below="@id/et3"
+        android:layout_marginLeft="70dp"
+        />
+
+    <TextView
+        android:id="@+id/p1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/p1"
+        android:textSize="30dp"
+        android:textColor="#FF0000"
+        android:layout_below="@id/price"
+        android:layout_toRightOf="@id/et1"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/p2"
+        android:textSize="30dp"
+        android:textColor="#FF0000"
+        android:layout_below="@id/p1"
+        android:layout_toRightOf="@id/et2"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/p3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/p3"
+        android:textSize="30dp"
+        android:layout_below="@id/p2"
+        android:layout_toRightOf="@id/et2"
+        android:layout_marginLeft="120dp"
+        android:textColor="#FF0000"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/p4"
+        android:textColor="#FF0000"
+        android:textSize="30dp"
+        android:layout_below="@id/p3"
+        android:layout_toRightOf="@id/et2"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/ord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+       />
+</RelativeLayout>

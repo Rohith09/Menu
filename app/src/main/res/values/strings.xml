@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Menu</string>
+    <string name="name">PR LIVE FOODS</string>
+    <string name="item">ITEM</string>
+    <string name="qty">QTY.ORDERED</string>
+    <string name="price">PRICE</string>
+    <string name="bg">BURGER</string>
+    <string name="mo">MOMOS</string>
+    <string name="sh">SHAKE</string>
+    <string name="co">COKE</string>
+    <string name="p1">40</string>
+    <string name="p2">40</string>
+    <string name="p3">45</string>
+    <string name="p4">40</string>
+    <string name="order">ORDER</string>
+
+
+
+
+
+
+</resources>
