@@ -103,7 +103,7 @@
         android:layout_toRightOf="@id/bg"
         android:layout_marginStart="50dp"
         android:layout_below="@id/qty"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
 
 
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/mo"
         android:layout_below="@id/et1"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="10dp"
 
 
@@ -140,7 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/co"
         android:layout_below="@id/et3"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="60dp"
         />
 
     <TextView
@@ -152,7 +152,7 @@
         android:textColor="#FF0000"
         android:layout_below="@id/price"
         android:layout_toRightOf="@id/et1"
-        android:layout_marginLeft="120dp"
+        android:layout_marginLeft="144dp"
         android:layout_marginTop="20dp"
         />
     <TextView
@@ -190,6 +190,25 @@
         android:layout_marginLeft="120dp"
         android:layout_marginTop="20dp"
         />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMAIL:"
+        android:textColor="#FF0000"
+        android:textSize="30dp"
+        android:layout_below="@id/co"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        />
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editM"
+        android:layout_alignTop="@+id/email"
+        android:layout_toRightOf="@+id/et1"
+        android:layout_toEndOf="@+id/et1" />
 
     <Button
         android:id="@+id/ord"

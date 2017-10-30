@@ -1,5 +1,7 @@
 package com.example.chandrassekhar.menu;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,15 +10,14 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static android.R.id.text1;
-import static android.widget.Toast.makeText;
-import static com.example.chandrassekhar.menu.R.id.text2;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     CheckBox burg,mom,sha,cok;
-    EditText edit1,edit2,edit3,edit4;
+    EditText edit1,edit2,edit3,edit4,edit5;
+    String email;
     Button ord;
+    Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edit2=(EditText)findViewById(R.id.et2);
         edit3=(EditText)findViewById(R.id.et3);
         edit4=(EditText)findViewById(R.id.et4);
+        edit5=(EditText)findViewById(R.id.editM);
         ord=(Button)findViewById(R.id.ord);
         ord.setOnClickListener(this);
 
@@ -43,30 +45,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        email=edit5.getText().toString();
+        String subject="Order Confirmation Mail.";
 
 
-
-
-String disp = " ";
+        String disp = " ";
 
         int total=0;
         if(burg.isChecked()){
             int text1=Integer.parseInt(edit1.getText().toString());
-            int tot=text1*40;
+            int tot=text1*15;
             total+=tot;
             disp+=" BURGER "+"  "+text1+" "+tot+"\n";
 
         }
         if(mom.isChecked()) {
             int text2=(Integer.parseInt(edit2.getText().toString()));
-            int tot2=text2*40;
+            int tot2=text2*25;
             total+=tot2;
             disp+= " MOMOS "+" "+text2+" "+tot2+"\n";
 
         }
         if(sha.isChecked()) {
             int text3=(Integer.parseInt(edit3.getText().toString()));
-            int tot3=text3*45;
+            int tot3=text3*20;
             total+=tot3;
             disp+= " SHAKE "+" "+text3+" "+tot3+"\n";
 
@@ -74,15 +76,20 @@ String disp = " ";
         if(cok.isChecked()){
             int text4=(Integer.parseInt(edit4.getText().toString()));
 
-            int tot4=text4*40;
+            int tot4=text4*30;
             total+=tot4;
             disp+=" COKE "+" "+text4+" "+tot4+"\n";
 
             }
 
             disp+="Total="+total;
-        Toast toast=makeText(getApplicationContext(),disp,Toast.LENGTH_LONG);
-        toast.show();
+
+        i=new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"+email));
+        i.putExtra(Intent.EXTRA_SUBJECT,subject);
+        i.putExtra(Intent.EXTRA_TEXT,disp);
+        startActivity(i);
+        finish();
+
 
 
 
